@@ -1,4 +1,5 @@
 const { ethers } = require("hardhat");
+
 async function main() {
   /*
   A ContractFactory in ethers.js is an abstraction used to deploy new smart contracts,
@@ -15,12 +16,12 @@ async function main() {
 
   // print the address of the deployed contract
   console.log("Whitelist contract address:", deployedWhitelistContract.address);
+}
 
-  // call the main function and catch if there is any error
-  main()
-    .then(() => process.exit(0))
-    .catch((error) => {
-      console.error(error);
-      process.exit(1);
-    });
-};
+// call the main function and catch if there is any error
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
